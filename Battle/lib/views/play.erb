@@ -1,2 +1,14 @@
-<h1><%=@player1_name %>100 point score</h1>
-<h1><%=@player2_name %>100 point score</h1>
+<h1><%=@player1_name %> 100 point score</h1>
+<h1><%=@player2_name %> 100 point score</h1>
+
+<!-- <button type="submit" id='p1_attack' onclick='/confirm' method='get'> Punch <%=@player2_name %></button> -->
+
+
+<form action="/confirm_p1" method='get'>
+    <input id='p1_attack' type="submit" value="Punch <%=@player2_name %>" />
+</form>
+
+
+<form action="/confirm_p2" method='get'>
+    <input id='p2_attack' type="submit" value="Punch <%=@player1_name %>" />
+</form>
