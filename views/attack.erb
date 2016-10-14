@@ -1,7 +1,11 @@
-<h1><%=@player_1_name%> has attacked <%=@player_2_name%>!</h1>
+<h1><%=$game.current_victim.name%> has attacked <%=$game.attacker.name%>!</h1>
 
-<h1><%=@player_2_name%>'s HP has reduced by 10!</h1>
+<h1><%=$game.attacker.name%>'s HP has reduced by 10!</h1>
 
+
+<p>Now it's <%=$game.attacker.name%>'s turn!'</p>
+
+<p></p>
 
 <form action="/play">
   <input type="submit" value="go back to battle!">

@@ -32,3 +32,10 @@ feature 'reduce hit points when attacked' do
     expect(page).to have_text("Fluffkins's HP has reduced by 10!")
   end
 end
+feature 'shows who\'s turn it is' do
+  scenario 'player 2\'s turn to attack' do
+    sign_in_and_play
+    click_button "ATTACK!"
+    expect(page).to have_text("Now it's Fluffkins's turn!")
+  end
+end
