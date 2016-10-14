@@ -12,5 +12,6 @@ class Game
   def attack#(player)
     @player_2.receive_damage
   end
-
+#
+# [@player_1,@player_2]
 end
