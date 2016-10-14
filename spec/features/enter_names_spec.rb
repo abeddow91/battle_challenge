@@ -36,6 +36,16 @@ feature 'shows who\'s turn it is' do
   scenario 'player 2\'s turn to attack' do
     sign_in_and_play
     click_button "ATTACK!"
+    click_button "go back to battle!"
     expect(page).to have_text("Now it's Fluffkins's turn!")
+  end
+end
+
+feature 'the games ends' do
+  scenario 'the game ends with a confirmation "player 1 wins"' do
+    sign_in_and_play
+    player_1_wins
+    click_button "ATTACK"
+    expect(page).to have_text("Truffles wins")
   end
 end

@@ -2,11 +2,13 @@
 
 <h1><%=$game.attacker.name%>'s HP has reduced by 10!</h1>
 
+<% if $game.current_victim.hit_points <=10 %>
+<p><%=$game.current_victim.name%> wins</p>
+<%end%>
 
-<p>Now it's <%=$game.attacker.name%>'s turn!'</p>
 
-<p></p>
-
+<% if $game.current_victim.hit_points >=20 %>
 <form action="/play">
   <input type="submit" value="go back to battle!">
 </form>
+<%end%>

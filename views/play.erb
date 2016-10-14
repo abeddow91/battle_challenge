@@ -8,6 +8,7 @@
   <h1><%=@player_1_name%> has <%=@player_1_hit_points%> points!</h1>
   <h1><%=@player_2_name%> has <%=@player_2_hit_points%> points!</h1>
 
+  <p>Now it's <%=$game.attacker.name%>'s turn!'</p>
 
   <form action="/attack">
     <input type="submit" value="ATTACK!">

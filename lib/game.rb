@@ -13,8 +13,8 @@ class Game
   end
 
   def attack
-
     @current_victim.receive_damage
+    end_game
     switch_turn
   end
 
@@ -28,4 +28,9 @@ class Game
       @attacker = @player_2
     end
   end
+
+def end_game
+  puts "#{@attacker.name} wins" if @current_victim.hit_points <=0
+end
+
 end
